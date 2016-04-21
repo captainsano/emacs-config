@@ -9,3 +9,7 @@
 (custom-set-variables
  '(clojure-align-forms-automatically t)
  '(clojure-indent-style :always-align))
+
+(defadvice ansi-term (after advise-ansi-term-coding-system)
+  (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix))
+(ad-activate 'ansi-term)
