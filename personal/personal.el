@@ -1,7 +1,7 @@
 (scroll-bar-mode -1)
 
 (global-linum-mode t)
-(add-hook 'clojure-mode 'aggressive-indent-mode)
+(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 
 (setq whitespace-line-column 500)
